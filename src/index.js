@@ -1,6 +1,6 @@
 import './css/styles.css';
 import { fetchCountries } from './fetchCountries';
-import Notiflix from 'notiflix';
+
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const debounce = require('lodash.debounce');
 const DEBOUNCE_DELAY = 300;
@@ -30,8 +30,8 @@ function onInput(event) {
         }
       }
     })
-      .catch(error => {
-        console.error(error);
+    .catch(error => {
+      console.error(error);
       Notify.failure('Oops, there is no country with that name');
     });
 }
