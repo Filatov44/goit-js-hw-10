@@ -1,5 +1,5 @@
 export function fetchCountries(name) {
-  const parametersRequest = 'name,capital,population,flags,language';
+  const parametersRequest = 'name,capital,population,flags,languages';
   const URL = `https://restcountries.com/v3.1/name/${name}?fields=${parametersRequest}`;
   return fetch(URL)
     .then(response => {
