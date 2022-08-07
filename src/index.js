@@ -18,6 +18,10 @@ function onInput(event) {
   const newCountry = event.target.value.trim();
   console.log(newCountry);
 
+  if (newCountry === '') {
+    return;
+  }
+
   fetchCountries(newCountry)
     .then(country => {
       if (newCountry !== '') {
