@@ -31,7 +31,7 @@ function onInput(event) {
       }
     })
     .catch(error => {
-      console.error(error);
+      console.log(error);
       Notify.failure('Oops, there is no country with that name');
     });
 }
@@ -62,12 +62,12 @@ function createCountry(country) {
       <div class="country-info-basic">
         <img class="country-info-flags" src="${flags.svg}" alt="${
         name.official
-      }" width="50px" />
+      }" width="60" />
         <h2 class="country-info-name">${name.official}</h2>
       </div>
-      <p class="country-info-capital"><span class="country-info-basic">Capital:</span> ${capital}</p>
-      <p class="country-info-population"><span class="country-info-basic">Population:</span> ${population}</p>
-      <p class="country-info-languages"><span class="country-info-basic">Languages:</span> ${Object.values(
+      <p class="country-info-capital"><span class="country-info-text">Capital:</span> ${capital}</p>
+      <p class="country-info-population"><span class="country-info-text">Population:</span> ${population}</p>
+      <p class="country-info-languages"><span class="country-info-text">Languages:</span> ${Object.values(
         languages
       )}</p>
     </div>`;
